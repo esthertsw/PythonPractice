@@ -1,0 +1,16 @@
+def reverse(a):
+    # Write your code here
+    
+    for i in range(0, (int)(len(a)/2)):
+        temp= a[i]
+        a[i]=a[len(a)-i - 1]
+        a[len(a)-i -1]=temp
+    return a
+    
+
+array = input("Enter a list of numbers separated by commas:\n")
+array = [int(x) for x in array.split(",")]
+
+
+reverse(array)
+print (array)
